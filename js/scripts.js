@@ -1,11 +1,11 @@
-var sentence = prompt("Enter a sentence: "); //take some input
-var lastLetter = sentence.charAt(sentence.length-1); //find letter at end
-var firstLetter = sentence.charAt(0); //find first letter
+var sentence = prompt("Enter a sentence: ");
+var lastLetter = sentence.charAt(sentence.length-1);
+var firstLetter = sentence.charAt(0);
 
 var firstLast = function() {
-  return (firstLetter + lastLetter).toUpperCase(); //concat first and last letter together and then uppercase it
+  return (firstLetter + lastLetter).toUpperCase();
 }
-var lastFirst = function() { //take shorted letters and reverse
+var lastFirst = function() {
   var firstShort = firstLast().charAt(0);
   var lastShort = firstLast().charAt(1);
   return (lastShort + firstShort).toUpperCase();
@@ -24,9 +24,9 @@ var lastFunction = function() {
   return fourthFunction().split("").reverse().join("");
 }
 
-$("h2").click(function() {
+$(".basic").click(function() {
   alert(sentence);
 });
-$("h3").click(function() {
+$(".cipher").click(function() {
   alert(lastFunction());
 });
